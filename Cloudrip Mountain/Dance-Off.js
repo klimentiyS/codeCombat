@@ -1,7 +1,7 @@
+let  friend = hero.findNearest(hero.findFriends());
+let distance = friend.pos.y - hero.pos.y;
 while(true) {
-    let friends = hero.findFriends();
-    let friend = friends[6];
     if (friend){
-        hero.move({'x': friend.pos.x, 'y': friend.pos.y - 6});
+        hero.move({'x': friend.pos.x, 'y': friend.pos.y - distance});
     }
 }
