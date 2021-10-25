@@ -14,6 +14,8 @@ for (let i = 0; i < friends.length; i++){
     let friend = friends[i];
     if (friend.type === "soldier"){
         soldiers.push(friend);
+    }else{
+        defends.push(friend);
     }
 }
 
@@ -21,11 +23,7 @@ while(true) {
     for (let j = 0; j < soldiers.length; j++){
         let soldier = soldiers[j];
         let defend = defends[j];
-        let enemy = soldier.findNearestEnemy();
-        if (enemy){
-            hero.command(soldier, "defend", defend);
-        }
-        
+        hero.command(soldier, "defend", defend);
     }
 }
 
